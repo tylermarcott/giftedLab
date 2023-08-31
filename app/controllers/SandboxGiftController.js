@@ -31,6 +31,14 @@ export class SandboxGiftController {
   }
 
 
+  // TODO: this is where we are at: we are attempting to be able to submit our form and collect the data in order to create a gift form this data. We are having an issue with page refresh upon submission.
+
+  sendGift() {
+    window.event.preventDefault()
+    console.log('sending a gift')
+  }
+
+
   async openGift(giftId) {
     try {
       sandboxGiftService.openGift(giftId)

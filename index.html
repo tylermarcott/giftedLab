@@ -41,28 +41,30 @@
   <!-- SECTION -->
   <main>
 
-
-
-
-
     <section class="container-fluid">
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+        <div class="offcanvas-header">
+          <h4 class="offcanvas-title" id="offcanvasLabel">Send a Gift</h4>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <form action="">
+            <input type="text" id="tag">
+            <label for="tag">message...</label>
+            <input type="url" id="url">
+            <label for="url">gif address...</label>
+            <button onsubmit="app.SandboxGiftController.sendGift()" type="submit">submit gift</button>
+          </form>
+        </div>
+      </div>
+      <button data-bs-toggle="offcanvas" data-bs-target="#offcanvas" class="btn btn-success elevation-3 text-light">send
+        a
+        gift</button>
       <div id="gift-template" class="row">
 
       </div>
     </section>
 
-
-    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
-      <div class="offcanvas-header">
-        <h4 class="offcanvas-title" id="offcanvasLabel">Send a Gift</h4>
-        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body">
-        <form action="">
-          stuff
-        </form>
-      </div>
-    </div>
 
 
 
