@@ -4,9 +4,24 @@ import { api } from "../services/AxiosService.js";
 
 
 class SandboxGiftService {
-  openGift(tag) {
+  async openGift(giftId) {
+    let foundGift = AppState.sandboxGifts.find(gift => gift.id == giftId)
+    if (!foundGift) return
 
+    console.log(foundGift)
+
+    foundGift.opened = true
+
+    // console.log(foundGift.opened)
+
+    await api.put(`/api/gifts/${foundGift.id}`, foundGift)
+
+    AppState.emit('sandboxGifts')
   }
+
+
+
+
   async getSandboxGift() {
     const res = await api.get('/api/gifts')
 
@@ -17,15 +32,7 @@ class SandboxGiftService {
     AppState.sandboxGifts = mappedArray
 
     console.log(AppState.sandboxGifts);
-
-
-
-
-
-
-
   }
-
 }
 
 
