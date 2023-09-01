@@ -1,14 +1,12 @@
 
 
-
-
-
-
 // AUTH SETTINGS
 import { AppState } from "../AppState.js";
 import { sandboxGiftService } from "../services/SandboxGiftsService.js";
+import { EventEmitter } from "../utils/EventEmitter.js";
 import { Pop } from "../utils/Pop.js";
 import { setHTML } from "../utils/Writer.js";
+
 
 // Domain: codeworksclassroom.auth0.com
 // Audience: https://codeworksclassroom.com

@@ -41,6 +41,8 @@
   <!-- SECTION -->
   <main>
 
+
+    <!-- STUB: gift submission form -->
     <section class="container-fluid">
       <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
         <div class="offcanvas-header">
@@ -48,12 +50,15 @@
           <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
-          <form action="">
+          <form onsubmit="app.SandboxGiftController.sendGift()" type="submit" action="">
             <input type="text" id="tag">
             <label for="tag">message...</label>
             <input type="url" id="url">
             <label for="url">gif address...</label>
-            <button onsubmit="app.SandboxGiftController.sendGift()" type="submit">submit gift</button>
+
+            <!--FIXME: NEED TO FIX THIS!!! -->
+            <button onclick="SubmitEvent">Submit</button>
+            <!-- NOTE: buttons don't submit, forms submit. -->
           </form>
         </div>
       </div>
